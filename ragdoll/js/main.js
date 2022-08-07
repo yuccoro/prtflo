@@ -4,11 +4,11 @@
   /*------------------------------
     スライドショー
   ------------------------------*/
-  const pic_array = ["img/hero01.jpg", "img/hero02.jpg", "img/hero03.jpg", "img/hero04.jpg", "img/hero05.jpg",];
+  const pic_array = ["img/hero01.jpg", "img/hero02.jpg", "img/hero03.jpg", "img/hero04.jpg", "img/hero05.jpg"];
   let slide_count = 0;
 
   function playSlideshow() {
-    if (slide_count === pic_array.length) {
+    if (slide_count === pic_array.length - 1) {
       slide_count = 0;
     } else {
       slide_count++;
