@@ -5,6 +5,7 @@ html {
   font-size: 94%;
   color: #000;
   background-color: #e5e6e1;
+  line-height: 1.5;
 }
 body, h1, h2, h3, p, ul, dl, dd {
   margin: 0;
@@ -78,6 +79,7 @@ section h2 {
 
 #lead .text {
   margin: 65px 100px 0;
+  line-height: 2;
 }
 #lead .btn {
   text-align: center;
@@ -128,6 +130,9 @@ section h2 {
   font-size: .8em;
   margin-top: 20px;
   line-height: 2;
+}
+#owner p:last-child {
+  text-align: left;
 }
 
 #news .inner {
