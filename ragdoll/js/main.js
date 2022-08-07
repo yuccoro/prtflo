@@ -4,24 +4,36 @@
   /*------------------------------
     スライドショー
   ------------------------------*/
-  const pic_array = ["img/hero01.jpg", "img/hero02.jpg", "img/hero03.jpg", "img/hero04.jpg", "img/hero05.jpg"];
-  let slide_count = 0;
+  // const pic_array = ["img/hero01.jpg", "img/hero02.jpg", "img/hero03.jpg", "img/hero04.jpg", "img/hero05.jpg"];
+  // let slide_count = 0;
 
-  function playSlideshow() {
-    if (slide_count === pic_array.length - 1) {
-      slide_count = 0;
-    } else {
-      slide_count++;
-    }
+  // function playSlideshow() {
+  //   if (slide_count === pic_array.length - 1) {
+  //     slide_count = 0;
+  //   } else {
+  //     slide_count++;
+  //   }
 
-    document.querySelector('#hero img').setAttribute('src', pic_array[slide_count]);
-  }
+  //   document.querySelector('#hero img').setAttribute('src', pic_array[slide_count]);
+  // }
 
-  setInterval(playSlideshow, 5000);
+  // setInterval(playSlideshow, 5000);
+
+  $('#hero').slick({
+    infinite: true, //スライドのループ
+    arrows: false,
+    fade: true,
+    speed: 3000,
+    autoplaySpeed: 3000,
+    autoplay: true,
+    pauseOnFocus: false,
+    pauseOnHover: false,
+    pauseOnDotsHover: false,
+  });
 
   /*------------------------------
     ボタン画像のマウスオーバー
-  ------------------------------*/;
+  ------------------------------*/
   const btns = (document.querySelectorAll('.btn img'));
 
   function addSrcOn(src) {
@@ -40,4 +52,9 @@
       btn.setAttribute('src', default_src);
     })
   });
+
+  /*------------------------------
+    スムーススクロール
+  ------------------------------*/
+  var scroll = new SmoothScroll('a[href*="#all"]');
 }

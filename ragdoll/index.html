@@ -5,7 +5,11 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="ラグドール専門のキャッテリー「moco」のサイトです。愛情を込めてブリーディングしています。">
+  <script src="js/jquery-3.6.0.min.js"></script>
+  <script src="js/smooth-scroll.min.js"></script>
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/slick.css">
+  <link rel="stylesheet" href="css/slick-theme.css">
   <title>ragdoll cattery moco</title>
 </head>
 <body id="all">
@@ -21,9 +25,13 @@
       </ul>
     </nav>
   </header>
-  <div id="hero">
-    <img src="img/hero01.jpg" alt="">
-  </div>
+  <ul id="hero">
+    <li><img src="img/hero01.jpg" alt=""></li>
+    <li><img src="img/hero02.jpg" alt=""></li>
+    <li><img src="img/hero03.jpg" alt=""></li>
+    <li><img src="img/hero04.jpg" alt=""></li>
+    <li><img src="img/hero05.jpg" alt=""></li>
+  </ul>
   <main>
     <section id="lead">
       <h2><img src="img/title_lead.png" alt="ラグドールという猫に魅せられて"></h2>
@@ -47,28 +55,28 @@
           <p><img src="img/photo01.jpg" alt=""></p>
           <dl>
             <dt>2022/07/24</dt>
-            <dd>レッドポイントの男の子見学受付中</dd>
+            <dd><a href="#">レッドポイントの男の子見学受付中</a></dd>
           </dl>
         </div>
         <div class="item">
           <p><img src="img/photo02.jpg" alt=""></p>
           <dl>
             <dt>2022/06/22</dt>
-            <dd>ブルーポイントの女の子見学受付中</dd>
+            <dd><a href="#">ブルーポイントの女の子見学受付中</a></dd>
           </dl>
         </div>
         <div class="item">
           <p><img src="img/photo03.jpg" alt=""></p>
           <dl>
             <dt>2022/05/10</dt>
-            <dd>全員集合！圧巻の食事風景を写真館にアップしました！</dd>
+            <dd><a href="#">全員集合！圧巻の食事風景を写真館にアップしました！</a></dd>
           </dl>
         </div>
       </div>
     </section>
     <div class="gotop">
-      <p><a href="#all"><img src="img/gotop_ball.png" alt="top"></a></p>
-      <p><img src="img/gotop_cat.png" alt=""></p>
+      <p class="ball"><a href="#all"><img src="img/gotop_ball.png" alt="top"></a></p>
+      <p class="cat"><img src="img/gotop_cat.png" alt=""></p>
     </div>
   </main>
   <footer>
@@ -87,5 +95,6 @@
     <p class="copyright">&copy; Yuko Izumida 2022</p>
   </footer>
 </body>
+<script src="js/slick.min.js"></script>
 <script src="js/main.js"></script>
 </html>
