@@ -65,12 +65,17 @@ h2 {
 	align-items: center;
 }
 
-.bgmain, .objpoint {
+.bgmain, .crosspoint {
 	position: relative;
 	z-index: 10;
-	height: 100vh;
 	opacity: 0;
 	pointer-events: none;
+}
+.bgmain {
+	height: 100vh;
+}
+.crosspoint {
+	height: 50vh;
 }
 
 .section-wrapper {

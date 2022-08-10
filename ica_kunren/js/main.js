@@ -1,7 +1,7 @@
 'use strict';
 
 {
-  const targets = document.querySelectorAll('.objpoint');
+  const targets = document.querySelectorAll('.crosspoint');
 
   function callback(entries, obs) {
 
