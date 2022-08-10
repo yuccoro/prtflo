@@ -3,14 +3,50 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Webコーダー 出水田祐子（いずみだ　ゆうこ） portfolio site ポートフォリオサイト">
+  <script src="js/jquery-3.6.0.min.js"></script>
   <title>YUKO IZUMIDA</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <h1>YUKO IZUMIDA</h1>
-  <p>Webコーダーを目指しています。</p>
-  <p>趣味で作成したWebページを掲載していきます。</p>
-  <ul>
-    <li><a href="ragdoll/index.html">ラグドールのブリーダーサイト（架空）</a></li>
-    <li><a href="ica_kunren/index.html">株式会社GRACE様 採用LP（職業訓練のグループ制作）</a></li>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="#works">WORKS</a></li>
+        <li><a href="#about">ABOUT</a></li>
+        <li><a href="#contact">CONTACT</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <div class="container">
+      <h1><img src="img/logo.svg" alt="YUKO IZUMIDA"></h1>
+      <p>Web corder's portofolio site</p>
+      <section class="works" id="works">
+        <h2>WORKS</h2>
+        <ul>
+          <li>
+            <a href="ragdoll/index.html">
+              <img src="ragdoll/img/cap_ragdoll.png" alt="ラグドールのブリーダーサイト（架空）">
+            </a>
+          </li>
+          <li style="border: 5px solid #014E59;">
+            <a href="ica_kunren/index.html" style="display: block; height: 100%; color: #014E59; text-decoration: none; text-align: center;">
+              <p>NO IMAGE</p>
+            </a>
+          </li>
+        </ul>
+      </section>
+      <section class="about" id="about">
+        <h2>ABOUT</h2>
+      </section>
+      <section class="contact" id="contact">
+        <h2>CONTACT</h2>
+      </section>
+    </div>
+  </main>
+
+  <script src="js/smooth-scroll.min.js"></script>
+  <script src="js/main.js"></script>
 </body>
 </html>
