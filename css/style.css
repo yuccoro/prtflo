@@ -101,7 +101,9 @@ h2 {
   gap: 8%;
 }
 .works li {
+  position: relative;
   flex: 1;
+  border: 2px solid #014E59;
 }
 .works li:nth-child(odd) {
   box-shadow: 8px 8px #FCCAB1;
@@ -112,9 +114,27 @@ h2 {
 .works li img {
   width: 100%;
 }
-.works li a {
+.works li a,
+.works .caption {
   transition: .3s;
 }
 .works li a:hover {
+  opacity: .6;
+}
+.works .caption {
+  position:absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 10px 0;
+  color: #014E59;
+  background-color: #fff;
+  font-size: .8em;
+  text-align: center;
+  z-index: 10;
+  pointer-events: none;
+  opacity: 0;
+  transition: .3s;
+}
+.works li:hover .caption {
   opacity: .6;
 }
