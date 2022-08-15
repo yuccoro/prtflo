@@ -5,12 +5,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Webコーダー 出水田祐子（いずみだ　ゆうこ） portfolio site ポートフォリオサイト">
   <script src="js/jquery-3.6.0.min.js"></script>
+  <script src="js/contact.js"></script>
   <title>YUKO IZUMIDA</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
   <header>
     <nav>
+      <div class="nav-toggle">
+        <span></span>
+        <span></span>
+      </div>
       <ul>
         <li><a href="#works">WORKS</a></li>
         <li><a href="#about">ABOUT</a></li>
@@ -19,36 +24,66 @@
     </nav>
   </header>
   <main>
-    <div class="container">
+    <div class="hero">
       <h1><img src="img/logo.svg" alt="YUKO IZUMIDA"></h1>
       <p>Web corder's portofolio site</p>
+    </div>
+
+    <div class="container">
       <section class="works" id="works">
         <h2>WORKS</h2>
         <ul>
           <li>
             <a href="ragdoll/index.html">
               <img src="ragdoll/img/cap_ragdoll.png" alt="ラグドールのブリーダーサイト（架空）">
+              <p class="caption">猫のブリーダーサイト（架空）</p>
             </a>
-            <p class="caption">猫のブリーダーサイト（架空）</p>
           </li>
           <li>
             <a href="ica_kunren/index.html" style="display: block; height: 100%; color: #014E59; text-decoration: none; text-align: center;">
               <p>NO IMAGE</p>
+              <p class="caption">株式会社GRACE様 採用LP<br>（職業訓練グループ制作）</p>
             </a>
-            <p class="caption">株式会社GRACE様 採用LP<br>（職業訓練グループ制作）</p>
           </li>
         </ul>
       </section>
+
       <section class="about" id="about">
         <h2>ABOUT</h2>
+        <div class="profile">
+          <p class="image"><img src="img/me.jpg" alt="me"></p>
+          <div class="text">
+            <h3>出水田　祐子</h3>
+            <h4>いずみだ　ゆうこ</h4>
+            <p>1991年 静岡県生まれ、千葉県育ち。</p>
+            <p>大学では計量社会学を専攻。大規模な調査データを収集・分析することで、マクロな視点で社会を読み解く力を養いました。</p>
+            <p>卒業後は大手独立系のSIerに就職。２年半、システムエンジニアとしてWebサーバーサイドのプログラム開発に携わりました。（主な使用言語はJava/SQL）</p>
+            <p>その後は日本最大級のインテリア・家具ECサイトの運営業務を１年半、都内私立大学の教務事務を３年間経験。</p>
+            <p>
+              現在は趣味として嗜んでいたWeb制作のスキルを、独学と職業訓練で向上させています。
+            </p>
+            <p>Webコーダー/フロントエンドエンジニアとして実務経験を積むことが目下の目標です。</p>
+          </div>
+        </div>
       </section>
+
       <section class="contact" id="contact">
         <h2>CONTACT</h2>
+        <div class="form">
+          <dl>
+            <dt><label for="name">NAME</label></dt>
+            <dd><input type="text" name="name" id="name" onkeyup='window.contact.checkValidation()'></dd>
+            <dt><label for="email" onkeyup='window.contact.checkValidation()'>E-mail</label></dt>
+            <dd><input type="text" name="email" id="email" onkeyup='window.contact.checkValidation()'></dd>
+            <dt><label for="message">MESSAGE</label></dt>
+            <dd><textarea name="message" id="message" rows="6" onkeyup='window.contact.checkValidation()'></textarea></dd>
+          </dl>
+          <div class="btn"><input type="submit" name="submit" id="submit" value="SUBMIT" onclick='window.contact.send(this)'></div>
+        </div>
       </section>
     </div>
   </main>
-
-  <script src="js/smooth-scroll.min.js"></script>
-  <script src="js/main.js"></script>
 </body>
+<script src="js/smooth-scroll.min.js"></script>
+<script src="js/main.js"></script>
 </html>

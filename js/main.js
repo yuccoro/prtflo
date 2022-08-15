@@ -2,6 +2,10 @@
 
 $(() => {
   var scroll = new SmoothScroll('a[href*="#"]', {
-    speed: 5000
+    speed: 1000
   });
+});
+
+$(function() {
+  window.contact.checkValidation()
 });

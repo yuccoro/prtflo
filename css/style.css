@@ -11,7 +11,7 @@ html {
 html, body {
   height: 100%;
 }
-body, h1, h2, p, ul {
+body, h1, h2, h3, h4, p, ul, dl, dd {
   margin: 0;
   padding: 0;
 }
@@ -39,17 +39,18 @@ header {
   position: fixed;
   top: 0;
   width: 100%;
-  padding: 1% 0 1%;
+  z-index: 10;
 }
 nav ul {
   display: flex;
   justify-content: center;
-  width: 30%;
+  width: 250px;
   margin: 0 0 0 auto;
+  padding: 1% 0;
   font-size: .8em;
 }
 nav li {
-  padding: 0 4% 0;
+  padding: 0 4%;
 }
 nav li + li {
   border-left: 1px solid #014E59;
@@ -65,18 +66,22 @@ nav a:hover {
   top: -1px;
   color: #FCCAB1;
 }
+.nav-toggle {
+  display: none;
+}
 
 /* ------------------------------ 
     Main
 ------------------------------ */
-.container {
-  margin: 8%;
-  padding: 5%;
-  background-color: rgba(255, 255, 255, .7);
+.hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 h1 {
-  width: 30%;
-  margin: 0 auto;
+  width: 250px;
   line-height: 1;
 }
 h1 + p {
@@ -84,8 +89,14 @@ h1 + p {
   text-align: center;
   margin-top: 10px;
 }
+
+.container {
+  margin: 0 8% 8%;
+  padding: 5%;
+  background-color: rgba(255, 255, 255, .7);
+}
 section {
-  margin-top: 10%;
+  margin-bottom: 15%;
 }
 h2 {
   width: fit-content;
@@ -103,7 +114,7 @@ h2 {
 .works li {
   position: relative;
   flex: 1;
-  border: 2px solid #014E59;
+  /* border: 2px solid #014E59; */
 }
 .works li:nth-child(odd) {
   box-shadow: 8px 8px #FCCAB1;
@@ -136,5 +147,142 @@ h2 {
   transition: .3s;
 }
 .works li:hover .caption {
-  opacity: .6;
+  opacity: 1;
+}
+
+.about .profile {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8%;
+  width: 90%;
+  margin: 0 auto;
+}
+.about .image {
+  width: 150px;
+}
+.about .image img {
+  border-radius: 50%;
+  width: 100%;
+}
+.about .text {
+  flex-basis: calc(100% - 150px);
+}
+.about .text h3 {
+  font-size: .9em;
+}
+.about .text h4 {
+  font-size: .6em;
+  font-weight: initial;
+  color: #31A3A3;
+}
+.about .text p {
+  margin-top: 8px;
+  font-size: .7em;
+}
+.about .text p:first-of-type {
+  margin-top: 15px;
+}
+
+.contact .form {
+  width: 80%;
+  margin: 0 auto;
+}
+.contact dl {
+  display: flex;
+  flex-wrap: wrap;
+}
+.contact dt {
+  width: 20%;
+  padding-right: 10px;
+  text-align: right;
+  box-sizing: border-box;
+}
+.contact dd {
+  width: 80%;
+}
+.contact dt,
+.contact dd {
+  margin-bottom: 10px;
+}
+.contact label {
+  font-size: .8em;
+}
+.contact input[type="text"],
+.contact textarea {
+  width: 100%;
+  border: 1px solid #014E59;
+  background-color: rgba(255, 255, 255, 0);
+  padding: 5px;
+}
+.contact .btn {
+  margin-top: 30px;
+  text-align: center;
+}
+.contact .btn input {
+  color: #014E59;
+  background-color: rgba(255, 255, 255, 0);
+  border: 2px solid #014E59;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+/* ------------------------------ 
+    レスポンシブ対応（スマホ）
+------------------------------ */
+@media screen and (max-width:600px) {
+
+  .nav-toggle {
+    display: block;
+    position: fixed;
+  }
+  nav ul {
+    position: fixed;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    width: 100%;
+    height: 200px;
+    background-color: #fff;
+    /* transform: translateX(-100%); */
+  }
+  nav li {
+    padding: 0%;
+  }
+  nav li + li {
+    border-left: none;
+  }
+
+  .container {
+    margin: 16% 8%;
+    padding: 10%;
+  }
+  h2 {
+    margin-top: 60px;
+  }
+
+  .works ul {
+    flex-direction: column;
+    gap: 30px;
+  }
+  .works li {
+    z-index: 0;
+  }
+  .works .caption {
+    display: none;
+  }
+
+  .about .profile {
+    flex-direction: column;
+    gap: 15px;
+    padding: 0;
+  }
+  .about .profile .image {
+    width: 100px;
+  }
+  .about .profile h3,
+  .about .profile h4 {
+    text-align: center;
+  }
+
 }
