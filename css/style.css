@@ -101,7 +101,7 @@ section {
 h2 {
   width: fit-content;
   margin: 0 auto 8%;
-  font-weight: initial;
+  font-weight: bold;
   font-size: 1.2em;
   border-bottom: 2px solid #31A3A3;
 }
@@ -170,6 +170,7 @@ h2 {
 }
 .about .text h3 {
   font-size: .8em;
+  font-weight: bold;
 }
 .about .text h4 {
   font-size: .6em;
@@ -225,6 +226,11 @@ h2 {
   border: 2px solid #014E59;
   padding: 10px 20px;
   cursor: pointer;
+  transition: .3s;
+}
+.contact .btn input:hover {
+  color: #fff;
+  background-color: #014E59;
 }
 
 footer p {
