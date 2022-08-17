@@ -230,6 +230,7 @@ h2 {
   text-align: center;
   cursor: pointer;
   transition: .3s;
+  -webkit-appearance: none;
 }
 .contact .btn input:hover {
   color: #fff;
