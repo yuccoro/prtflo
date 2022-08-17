@@ -287,7 +287,8 @@ footer p {
     flex-direction: column;
     gap: 20px;
     align-items: center;
-    font-size: 1em;
+    font-size: 1.5em;
+    font-weight: bold;
   }
   nav li {
     padding: 0%;
