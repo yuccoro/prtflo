@@ -6,7 +6,7 @@
 html {
   line-height: 1.5;
   color: #014E59;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
 }
 html, body {
   height: 100%;
@@ -102,7 +102,7 @@ h2 {
   width: fit-content;
   margin: 0 auto 8%;
   font-weight: initial;
-  font-size: 1em;
+  font-size: 1.2em;
   border-bottom: 2px solid #31A3A3;
 }
 
@@ -227,24 +227,58 @@ h2 {
   cursor: pointer;
 }
 
+footer p {
+  font-size: .8em;
+  text-align: center;
+}
+
 /* ------------------------------ 
     レスポンシブ対応（スマホ）
 ------------------------------ */
 @media screen and (max-width:600px) {
 
-  .nav-toggle {
+  .sp-menu {
     display: block;
+    width: 100%;
+    height: 60px;
+  }
+  .toggle {
+    width: 30px;
+    height: 100%;
+    margin: 0 15px 0 auto;
+  }
+  .toggle span {
+    position: absolute;
+    width: 30px;
+    height: 4px;
+    background-color: #014E59;
+  }
+  .toggle span:first-child {
+    top: 21px;
+    transition: .2s;
+  }
+  .toggle span:last-child {
+    top: 35px;
+    transition: .2s;
+  }
+  nav {
     position: fixed;
+    z-index: 15;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #fff;
+    opacity: 0;
+    transform: translateX(100%);
+    transition: .3s;
   }
   nav ul {
-    position: fixed;
+    width: 100%;
+    height: 100%;
     flex-direction: column;
     gap: 20px;
     align-items: center;
-    width: 100%;
-    height: 200px;
-    background-color: #fff;
-    /* transform: translateX(-100%); */
+    font-size: 1em;
   }
   nav li {
     padding: 0%;
@@ -252,13 +286,26 @@ h2 {
   nav li + li {
     border-left: none;
   }
+  /* sp-menu open */
+  .toggle.open span:first-child {
+    top: 28px;
+    transform: rotate(45deg);
+  }
+  .toggle.open span:last-child {
+    top: 28px;
+    transform: rotate(-45deg);
+  }
+  nav.show {
+    opacity: .8;
+    transform: translateX(0);
+  }
 
   .container {
     margin: 16% 8%;
     padding: 10%;
   }
-  h2 {
-    margin-top: 60px;
+  section {
+    margin-bottom: 60px;
   }
 
   .works ul {
@@ -285,4 +332,15 @@ h2 {
     text-align: center;
   }
 
+  .contact dt,
+  .contact dd {
+    width: 100%;
+  }
+  .contact dt {
+    text-align: left;
+    margin-bottom: 0;
+  }
+  .contact .btn {
+    margin-top: 10px;
+  }
 }
