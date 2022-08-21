@@ -210,8 +210,9 @@ header {
     メイン
 ------------------------------*/
 main {
-	position: relative;
+  position: relative;
   z-index: 10;
+  overscroll-behavior: none;
 }
 main section {
   padding: 60px 0 100px;
