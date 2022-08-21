@@ -1,0 +1,87 @@
+@charset "utf-8";
+#contact{
+	min-height: 900px;
+	max-height: auto;
+}
+.mapbox  {
+	display: flex;
+  justify-content: space-around;
+	flex-wrap: wrap;
+  gap: 30px;
+}
+.mapbox .gmap {
+    position: relative;
+    vertical-align: middle;
+}
+
+.gmap .address {
+    margin-right: auto;
+    align-items: flex-end;
+    text-align: left;
+    padding-top: 20px;
+}
+
+.mapbox .maptext {
+  vertical-align: top;
+	display:inline-block;
+  width: 400px;
+}
+.mapbox .maptext ul {
+  list-style-type: circle;
+  padding: 10px 0 10px 50px;
+}
+.mapbox .maptext p + p {
+  padding-top: 10px;
+} 
+/*クラス設定
+　mapbox…テキスト、ｇマップ、アドレス全体
+　gmap…ｇマップの設定
+　maptext…左側のテキスト
+  gmap_add…ｇマップとアドレス*/
+
+.mapbox .gmap {
+margin: auto;
+display: inline-block;
+overflow: hidden;
+position: relative;
+height: 400px;
+width: 400px;
+border: 10px solid #fff;
+}
+.gmap iframe {
+position: absolute;
+display: inline-block;
+left: 0;
+top: 0;
+height: 100%;
+width: 100%;
+}
+.gmap_add p{
+	padding: 15px 0 0 15px;
+}
+
+/*フォームボタンとテキスト*/
+.formbtn{
+	flex-direction: column;
+	width:300px;
+	text-align:  center;
+	margin: 50px auto;
+}
+.formbtn .text {
+  color: #fff;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+@media screen and (max-width:520px){
+  #contact{
+    min-height: auto;
+  }
+	.mapbox{
+		font-size: 14px;
+	}
+	.mapbox .gmap{
+		width: 350px;
+		height: 250px;
+	}
+}

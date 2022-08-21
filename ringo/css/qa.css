@@ -1,0 +1,106 @@
+@charset "utf-8";
+/*Q＆Aとアコーディオンの共通の設定*/
+#qa{
+	min-height:900px;
+	max-height: auto;
+}
+.acopen {
+    padding: 10px;
+    width: 100%;
+	/*カーソルの形を変える*/
+    cursor: pointer;
+}
+.acclose {
+	padding: 20px;
+	background-color: #6FABE5;
+	/*閉じた状態にしておく*/
+	display: none;
+}
+#qa .acopen p{
+	font-size: 20pt;
+}
+#qa .acclose{
+	font-size: 16pt;
+}
+
+/*マウスオーバーで下線出るやつ*/
+.acopen p{
+  position: relative;
+  display: inline-block;
+}
+.acopen p::after {
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  content: '';
+  width: 100%;
+  height: 10%;
+  background: #FFF;
+  transform: scale(0, 1);
+  transform-origin: left top;
+  transition: transform .3s;
+}
+.acopen p:hover::after {
+  transform: scale(1, 1);
+}
+
+/*閉じるボタン*/
+.acopen,.peke{
+	display: flex;
+	  align-items: center;
+}
+.peke {
+	display: inline-block;
+	position: relative;
+	width: 30px;
+	height: 30px;
+	transition: 0.5s;
+	margin-left: auto;
+}
+.peke::before, .peke::after { /* 共通設定 */
+	content: "";
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 5px; /* 棒の幅（太さ） */
+	height: 30px; /* 棒の高さ */
+	background-color: #FFF;
+}
+.peke::before {
+  transform: translate(-50%,-50%) rotate(90deg);
+}
+.peke::after {
+  transform: translate(-50%,-50%) rotate(-180deg);
+}
+.acopen.open .peke{
+	transform: rotate(315deg);
+}
+
+@media screen and (max-width:520px){
+	#qa p{
+	margin-right: 20px;
+	}
+	#qa .acclose{
+	margin-right: 30px;
+	padding: 20px;
+}
+	#qa .acclose p{
+	font-size: 12pt;
+}
+	#qa .acopen p,ul .flow p{
+	font-size: 14pt;
+	font-style: bold;
+}
+	.peke {
+	top:auto;
+	padding-right: 30px;
+	width: 14px;
+	height: 14px;
+}
+.peke::before, .peke::after { /* 共通設定 */
+  top: 50%;
+  left: 50%;
+  width: 3px; /* 棒の幅（太さ） */
+  height: 20px; /* 棒の高さ */
+}
+}

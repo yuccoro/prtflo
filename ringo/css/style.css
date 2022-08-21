@@ -1,0 +1,496 @@
+@charset "utf-8";
+
+/*------------------------------
+    リセット
+------------------------------*/
+body, ul, h1, h2, h3, p {
+	margin: 0;
+	padding: 0;
+}
+img {
+	vertical-align: middle;
+}
+ul {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+}
+
+/*------------------------------
+    common
+------------------------------*/
+html {
+  font-family: YuGothic, "Yu Gothic medium", "Hiragino Sans", Meiryo, "sans-serif";
+  color: #202020;
+  line-height: 2;
+  scroll-behavior: smooth;
+}
+h1 {
+  width: 140px;
+}
+h2 {
+  margin-bottom: 45px;
+}
+h3 {
+  color: #fff;
+  font-size: 1.6em;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 30px;
+}
+.inner {
+  padding-left: 4%;
+  padding-right: 240px;
+}
+
+/*------------------------------
+    ナビゲーション
+------------------------------*/
+nav {
+  position: fixed;
+  right: 0;
+  padding: 5vh 5vw 0 0;
+  z-index: 20;
+}
+nav .toggle {
+  display: none;
+}
+nav ul {
+  padding-top: 12px;
+}
+nav ul li + li {
+  padding-top: 10px;
+}
+nav ul li p {
+  text-align: right;
+  color: #848181;
+  font-weight: bold;
+}
+nav ul li a[href="#about"]:hover p {
+  background-color: #EF7197;
+}
+nav ul li a[href="#want"]:hover p {
+  background-color: #F1F14B;
+}
+nav ul li a[href="#qa"]:hover p {
+  background-color: #5FA0DF;
+}
+nav ul li a[href="#recruit"]:hover p {
+  background-color: #3CEF8B;
+}
+nav ul li a[href="#contact"]:hover p {
+  background-color: #F38A4B;
+}
+
+/*------------------------------
+    ヘッダー
+------------------------------*/
+header {
+	position: fixed;
+	top: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+	width: 100%;
+  height: 100vh;
+	z-index: 0;
+}
+.main {
+  display: flex;
+	justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  width: 100%;
+  opacity: .5;
+  transition: .8s;
+}
+.main>div {
+	width: 28vw;
+  height: 28vw;
+	border-radius: 25%;
+}
+.main a {
+	display: none;
+	width: 100%;
+	height: 100%;
+	border-radius: 20%;
+	text-decoration: none;
+}
+.main a p {
+  height: 15%;
+  min-height: 10%;
+}
+.main a p img {
+  width: 100%;
+  height: 100%;
+}
+.main .about {
+	background-color: #EF7197;
+  transform: rotate(-20deg);
+}
+.main .about p {
+  transform: rotate(20deg);
+}
+.main .want {
+	background-color: #F1F14B;
+}
+.main .qa {
+	background-color: #5FA0DF;
+  transform: rotate(5deg);
+}
+.main .qa p {
+  transform: rotate(-5deg);
+}
+.main .recruit {
+  background-color: #3CEF8B;
+  transform: rotate(-45deg);
+}
+.main .recruit p {
+  transform: rotate(45deg);
+}
+.main .contact {
+  background-color: #F38A4B;
+  transform: rotate(12deg);
+}
+.main .contact p {
+  transform: rotate(-12deg);
+}
+/* ヘッダー＠下スクロール */
+.main.appear {
+	opacity: 1;
+}
+.main.appear a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.holdbar,
+.crosspoint {
+	position: relative;
+  opacity: 0;
+  pointer-events: none;
+  z-index: 10;
+}
+.holdbar {
+  height: 100vh;
+}
+.crosspoint {
+  height: 50vh;
+}
+
+/*------------------------------
+    キャッチコピー
+------------------------------*/
+.catch {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5vh;
+  position: fixed;
+  padding: 0 8vw;
+  height: 100vh;
+  z-index: 5;
+  transition: .8s;
+}
+.catch.hidden {
+  z-index: -10;
+}
+.catch p:nth-child(1) {
+  width: calc((536/1200)*100vw);
+}
+.catch p:nth-child(2) {
+  width: calc((442/1200)*100vw);
+}
+.catch p:nth-child(3) {
+  width: calc((300/1200)*100vw);
+}
+
+/*------------------------------
+    メイン
+------------------------------*/
+main {
+	position: relative;
+  z-index: 10;
+}
+main section {
+  padding: 60px 0 100px;
+}
+section {
+  min-height:100vh;
+}
+
+/* ABOUT */
+section.about {
+  background-color: #EF7197;
+}
+section.about p {
+  text-align: center;
+}
+.business-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  background-color: rgba(255, 255, 255, .2);
+  border-radius: 45px;
+  margin: 0 10px;
+  padding: 15px;
+}
+.busi-image {
+  max-width: 600px;
+  min-width: 200px;
+}
+.busi-image img {
+  width: 100%;
+}
+.business-wrapper ul {
+  list-style-type: disc;
+  padding-bottom: 20px;
+}
+section.about .more-text {
+  color: #fff;
+  font-weight: bold;
+  margin-top: 60px;
+}
+section.about .more-btn {
+  margin-top: 15px;
+  margin-bottom: 60px;
+  text-align: center;
+}
+.env-image {
+  margin-top: 30px;
+}
+.env-image img {
+  width: 100%;
+}
+
+/* WANT */
+section.want {
+  background-color: #F1F14B;
+}
+
+/* Q&A */
+section.qa {
+  background-color: #5FA0DF;
+}
+
+/* RECRUIT */
+section.recruit {
+  background-color: #3CEF8B;
+}
+
+/* CONTACT */
+section.contact {
+  background-color: #F38A4B;
+}
+
+/*------------------------------
+    フッター
+------------------------------*/
+footer {
+  position: relative;
+  padding-top: 55px;
+  background-color: #fff;
+  z-index: 10;
+}
+footer .logo {
+  width: 140px;
+  margin: 0 auto;
+}
+footer ul {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 36px;
+  font-size: .8em;
+}
+footer ul a {
+  color: #848181;
+  font-weight: bold;
+}
+footer ul a[href="#all"]:hover {
+  color: #94ADB6;
+}
+footer ul a[href="#about"]:hover {
+  color: #EF7197;
+}
+footer ul a[href="#want"]:hover {
+  color: #F1F14B;
+}
+footer ul a[href="#qa"]:hover {
+  color: #5FA0DF;
+}
+footer ul a[href="#recruit"]:hover {
+  color: #3CEF8B;
+}
+footer ul a[href="#contact"]:hover {
+  color: #F38A4B;
+}
+footer .copyright {
+  color: #848181;
+  font-size: .6em;
+  text-align: center;
+  padding: 60px 0 20px;
+}
+
+/*------------------------------
+    ページトップ
+------------------------------*/
+.pagetop {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  right: 5vw;
+  z-index: 20;
+}
+
+
+/*------------------------------
+    レスポンシブ対応（スマホ）
+------------------------------*/
+@media screen and (min-width:521px){
+  /* closeしたナビゲーションの消失防止 */
+  nav ul {
+    display: block !important;
+  }
+}
+
+@media screen and (max-width:520px) {
+  
+  /*------------------------------
+      common
+  ------------------------------*/
+  h2 {
+    height: 36px;
+  }
+  h3 {
+    font-size: 1.2em;
+  }
+  .inner {
+    padding-left: 4%;
+    padding-right: 4%;
+  }
+
+  /*------------------------------
+      ナビゲーション
+  ------------------------------*/
+  nav {
+    padding: 3vh 5vw 0;
+  }
+  nav .toggle {
+    display: block;
+    position: relative;
+    width: 35px;
+    height: 30px;
+    margin: 18px 0 0 auto;
+    cursor: pointer;
+  }
+  nav .toggle span {
+    position: absolute;
+    width: 35px;
+    height: 4px;
+    background-color: #424165;
+    border-radius: 2px;
+    transition: .3s;
+  }
+  nav .toggle span:nth-child(1) {
+    top: 0px;
+  }
+  nav .toggle span:nth-child(2) {
+    top: 13px;
+    left: 0;
+  }
+  nav .toggle span:nth-child(3) {
+    top: 26px;
+  }
+  /* open */
+  nav {
+    transition: background-color .4s;
+  }
+  nav.open {
+    background-color: rgba(255, 255, 255, .6);
+    height: 100%;
+  }
+  nav .toggle.open span:nth-child(1) {
+    transform: rotate(315deg);
+    top: 13px;
+  }
+  nav .toggle.open span:nth-child(2) {
+    width: 0;
+    left: 50%;
+  }
+  nav .toggle.open span:nth-child(3) {
+    transform: rotate(-315deg);
+    top: 13px;
+  }
+  nav ul {
+    display: none;
+    padding-top: 10px;
+  }
+
+  /*------------------------------
+      ヘッダー
+  ------------------------------*/
+  header {
+    height: 60vh;
+  }
+  .main {
+    gap: 20px;
+  }
+  .holdbar {
+    height: 60vh;
+  }
+  .crosspoint {
+    display: none;
+  }
+  
+  .catch {
+    gap: 3vh;
+    height: 60vh;
+  }
+  
+  main section {
+    padding: 25px 0;
+  }
+  main h2 img,
+  main h3 img {
+    height: 100%;
+    vertical-align: top;
+  }
+  
+  /*------------------------------
+      メイン
+  ------------------------------*/
+  /* ABOUT */
+  .business-wrapper {
+    flex-direction: column;
+  }
+  
+  /*------------------------------
+      フッター
+  ------------------------------*/
+  footer {
+    padding-top: 35px;
+  }
+  footer .logo {
+    width: 100px;
+  }
+  footer ul {
+    width: 190px;
+    margin: 16px auto 0;
+    font-size: .6em;
+  }
+
+  /*------------------------------
+      ページトップ
+  ------------------------------*/
+  .pagetop {
+    width: 19px;
+    height: 92px;
+  }
+  .pagetop img {
+    width: 100%;
+    height: 100%;
+  }
+}

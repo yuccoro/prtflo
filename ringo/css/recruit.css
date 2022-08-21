@@ -1,0 +1,84 @@
+@charset "utf-8";
+/*Recruit設定*/
+#recruit{
+	min-height:100vh;
+}
+#recruit th{
+	font-size: 16px;
+	vertical-align: top;
+	text-align: left;
+	width: 30%;
+	font-style: bold;
+}
+#recruit td{
+	font-size: 16px;
+	width: 70%;
+	height: auto;
+	vertical-align: top;
+	text-align: left;
+	padding-bottom: 30px;
+}
+#recruit .acopen p{
+	font-size: 20pt;
+}
+#recruit .acclose{
+	background-color: #58F19C;
+}
+#recruit .acclose p{
+	font-size: 16pt;
+}
+
+.flow li:not(:last-child):after{	
+ content:url("../img/triangle_min.png");
+	margin-left: 30px;
+}
+.recruit.inner{
+	position: relative;
+}
+.rec_inner{
+	position: relative;
+	bottom: auto;
+	height: 300px;
+}
+.bg_recimg{
+	background-image: url("../img/rec_bgimg.png");
+	background-repeat: no-repeat;
+	background-position:left bottom;
+	background-size: contain;
+	margin-top: 80px;
+}
+.bg_recimg img{
+	position: absolute;
+	left: 0;
+	bottom: 0;
+}
+
+@media screen and (max-width:520px){
+	#recruit{
+	min-height: auto;
+}
+	#recruit th{
+	font-size: 14px;
+}
+	#recruit td{
+	font-size: 12px;
+}
+	#recruit .acclose p{
+	font-size: 12px;
+}
+	#recruit .acopen p{
+	font-size: 18px;
+	font-style: bold;
+}
+.rec_inner{
+	position: relative;
+	bottom: auto;
+	height: 200px;
+}
+.bg_recimg{
+	background-repeat: no-repeat;
+	background-position:center bottom;
+	background-size: contain;
+	margin-top: 20px;
+}
+}

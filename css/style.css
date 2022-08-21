@@ -114,14 +114,14 @@ h2 {
 .works li {
   position: relative;
   flex: 1;
-  /* border: 2px solid #014E59; */
+  box-shadow: 8px 8px #dcdcdc;
 }
-.works li:nth-child(odd) {
+/* .works li:nth-child(odd) {
   box-shadow: 8px 8px #FCCAB1;
 }
 .works li:nth-child(even) {
   box-shadow: 8px 8px #8FCBD3;
-}
+} */
 .works li img {
   width: 100%;
 }
@@ -246,7 +246,6 @@ footer p {
     レスポンシブ対応（スマホ）
 ------------------------------ */
 @media screen and (max-width:600px) {
-
   .sp-menu {
     display: block;
     position: relative;
@@ -282,6 +281,7 @@ footer p {
     height: 100vh;
     background-color: rgba(255, 255, 255, .8);
     transform: translateX(100%);
+    opacity: 0;
     transition: .3s;
   }
   nav ul {
@@ -309,6 +309,7 @@ footer p {
     transform: rotate(-45deg);
   }
   nav.show {
+    opacity: 1;
     transform: translateX(0);
   }
 
@@ -326,9 +327,6 @@ footer p {
   .works ul {
     flex-direction: column;
     gap: 30px;
-  }
-  .works li {
-    z-index: 0;
   }
   .works .caption {
     display: none;
