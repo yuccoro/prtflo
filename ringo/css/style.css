@@ -211,9 +211,9 @@ header {
     メイン
 ------------------------------*/
 main {
+  width: 100%;
   position: relative;
   z-index: 10;
-  touch-action: none;
 }
 main section {
   padding: 60px 0 100px;
@@ -347,19 +347,18 @@ footer .copyright {
   z-index: 20;
 }
 
-
 /*------------------------------
     レスポンシブ対応（スマホ）
 ------------------------------*/
 @media screen and (min-width:521px){
-  /* closeしたナビゲーションの消失防止 */
+  /* ウインドウリサイズによる
+  closeしたナビゲーションの消失防止 */
   nav ul {
     display: block !important;
   }
 }
 
 @media screen and (max-width:520px) {
-  
   /*------------------------------
       common
   ------------------------------*/
@@ -452,6 +451,9 @@ footer .copyright {
     height: 60vh;
   }
   
+  /*------------------------------
+  メイン
+  ------------------------------*/
   main section {
     padding: 25px 0;
   }
@@ -461,9 +463,6 @@ footer .copyright {
     vertical-align: top;
   }
   
-  /*------------------------------
-      メイン
-  ------------------------------*/
   /* ABOUT */
   .business-wrapper {
     flex-direction: column;
