@@ -1,1 +1,48 @@
 @charset "utf-8";
+
+/* ------------------------------ 
+    main
+------------------------------ */
+.mock {
+  width: 60%;
+  margin: 0 auto;
+}
+.mock img {
+  width: 100%;
+}
+
+.works-container {
+  width: 100%;
+  padding: 5%;
+  box-sizing: border-box;
+  background-color: rgba(255, 255, 255, .7);
+}
+h1 {
+  text-align: center;
+  font-size: 1.8em;
+}
+h1 + p {
+  text-align: center;
+  font-size: 1.2em;
+}
+section {
+  margin-top: 5%;
+}
+
+h2 {
+  position: relative;
+  z-index: 10;
+  display: inline-block;
+  text-align: center;
+  font-size: 1.2em;
+  padding: 10px;
+  background-color: #FCCAB1;
+}
+h2 + p {
+  position: relative;
+  left: 25px; top: -25px;
+  width: 90%;
+  padding: 15px;
+  border: 1px solid #31A3A3;
+  text-indent: 2em;
+}
