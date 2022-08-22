@@ -52,15 +52,16 @@ h1 + p {
 section {
   margin-top: 5%;
 }
-
 h2 {
   position: relative;
-  z-index: 10;
+  z-index: 5;
   display: inline-block;
+  padding: 10px;
   text-align: center;
   font-size: 1.2em;
-  padding: 10px;
-  background-color: #FCCAB1;
+  font-weight: initial;
+  color: #fff;
+  background-color: #31A3A3;
 }
 h2 + p {
   position: relative;
