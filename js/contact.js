@@ -44,3 +44,7 @@ window.contact.ajax = function(data){
         location.href="./index.html";
     })
 }
+
+$(() => {
+    window.contact.checkValidation()
+});

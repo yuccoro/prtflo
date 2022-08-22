@@ -1,0 +1,143 @@
+@charset "utf-8";
+
+/* ------------------------------ 
+    Common Settings
+------------------------------ */
+html {
+  line-height: 1.5;
+  color: #014E59;
+  font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+}
+html, body {
+  height: 100%;
+}
+body, h1, h2, h3, h4, p, ul, dl, dd {
+  margin: 0;
+  padding: 0;
+}
+img {
+  vertical-align: top;
+}
+ul {
+  list-style-type: none;
+}
+body::after {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  content: "";
+  z-index: -10;
+  background: linear-gradient(45deg, #D3EAF0, #FCCAB1, #31A3A3 80%);
+}
+
+/* ------------------------------ 
+    Header
+------------------------------ */
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+}
+nav ul {
+  display: flex;
+  justify-content: center;
+  width: 250px;
+  margin: 0 0 0 auto;
+  padding: 1%;
+  font-size: .8em;
+}
+nav li {
+  padding: 0 4%;
+}
+nav li + li {
+  border-left: 1px solid #014E59;
+}
+nav a {
+  position: relative;
+  top: 0px;
+  color: #014E59;
+  text-decoration: none;
+  transition: .3s;
+}
+nav a:hover {
+  top: -1px;
+  color: #FCCAB1;
+}
+.nav-toggle {
+  display: none;
+}
+
+/* ------------------------------ 
+    レスポンシブ対応（スマホ）
+------------------------------ */
+@media screen and (max-width:600px) {
+  .sp-menu {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 60px;
+    z-index: 15;
+  }
+  .toggle {
+    width: 30px;
+    height: 100%;
+    margin: 0 15px 0 auto;
+    cursor: pointer;
+  }
+  .toggle span {
+    position: absolute;
+    width: 30px;
+    height: 4px;
+    background-color: #014E59;
+  }
+  .toggle span:first-child {
+    top: 21px;
+    transition: .2s;
+  }
+  .toggle span:last-child {
+    top: 35px;
+    transition: .2s;
+  }
+  nav {
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(255, 255, 255, .8);
+    transform: translateX(100%);
+    opacity: 0;
+    transition: .3s;
+  }
+  nav ul {
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    font-size: 1.5em;
+    font-weight: bold;
+  }
+  nav li {
+    padding: 0%;
+  }
+  nav li + li {
+    border-left: none;
+  }
+  /* sp-menu open */
+  .toggle.open span:first-child {
+    top: 28px;
+    transform: rotate(45deg);
+  }
+  .toggle.open span:last-child {
+    top: 28px;
+    transform: rotate(-45deg);
+  }
+  nav.show {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}

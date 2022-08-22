@@ -24,7 +24,7 @@
 .mapbox .maptext {
   vertical-align: top;
 	display:inline-block;
-  width: 400px;
+  flex: 1;
 }
 .mapbox .maptext ul {
   list-style-type: circle;
@@ -39,6 +39,9 @@
 　maptext…左側のテキスト
   gmap_add…ｇマップとアドレス*/
 
+.mapbox .gmap_add {
+  flex: 1;
+}
 .mapbox .gmap {
 margin: auto;
 display: inline-block;
@@ -63,7 +66,6 @@ width: 100%;
 /*フォームボタンとテキスト*/
 .formbtn{
 	flex-direction: column;
-	width:300px;
 	text-align:  center;
 	margin: 50px auto;
 }

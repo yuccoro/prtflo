@@ -26,7 +26,8 @@
 /*マウスオーバーで下線出るやつ*/
 .acopen p{
   position: relative;
-  display: inline-block;
+  display: block;
+	width: 100%;
 }
 .acopen p::after {
   position: absolute;
@@ -77,6 +78,9 @@
 }
 
 @media screen and (max-width:520px){
+	#qa{
+	min-height: auto;
+}
 	#qa p{
 	margin-right: 20px;
 	}

@@ -23,6 +23,7 @@ a {
 html {
   font-family: YuGothic, "Yu Gothic medium", "Hiragino Sans", Meiryo, "sans-serif";
   color: #202020;
+  font-size: 22px;
   line-height: 2;
   scroll-behavior: smooth;
 
@@ -35,7 +36,7 @@ h2 {
 }
 h3 {
   color: #fff;
-  font-size: 1.6em;
+  font-size: 1.23em;
   font-weight: bold;
   text-align: center;
   margin-bottom: 30px;
@@ -65,14 +66,16 @@ nav ul li + li {
 }
 nav ul li p {
   text-align: right;
-  color: #848181;
   font-weight: bold;
+}
+nav ul li a {
+  color: #424165;
 }
 nav ul li a[href="#about"]:hover p {
   background-color: #EF7197;
 }
 nav ul li a[href="#want"]:hover p {
-  background-color: #F1F14B;
+  background-color: #ba75e8;
 }
 nav ul li a[href="#qa"]:hover p {
   background-color: #5FA0DF;
@@ -129,16 +132,19 @@ header {
 .main .about {
 	background-color: #EF7197;
   transform: rotate(-20deg);
+  transition: .3s;
 }
 .main .about p {
   transform: rotate(20deg);
 }
 .main .want {
-	background-color: #F1F14B;
+	background-color: #ba75e8;
+  transition: .3s;
 }
 .main .qa {
 	background-color: #5FA0DF;
   transform: rotate(5deg);
+  transition: .3s;
 }
 .main .qa p {
   transform: rotate(-5deg);
@@ -146,6 +152,7 @@ header {
 .main .recruit {
   background-color: #3CEF8B;
   transform: rotate(-45deg);
+  transition: .3s;
 }
 .main .recruit p {
   transform: rotate(45deg);
@@ -153,6 +160,7 @@ header {
 .main .contact {
   background-color: #F38A4B;
   transform: rotate(12deg);
+  transition: .3s;
 }
 .main .contact p {
   transform: rotate(-12deg);
@@ -165,6 +173,21 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.main.appear .about:hover {
+  transform: rotate(-5deg);
+}
+.main.appear .want:hover {
+  transform: rotate(15deg);
+}
+.main.appear .qa:hover {
+  transform: rotate(20deg);
+}
+.main.appear .recruit:hover {
+  transform: rotate(-30deg);
+}
+.main.appear .contact:hover {
+  transform: rotate(0);
 }
 .holdbar,
 .crosspoint {
@@ -269,7 +292,7 @@ section.about .more-btn {
 
 /* WANT */
 section.want {
-  background-color: #F1F14B;
+  background-color: #ba75e8;
 }
 
 /* Q&A */
@@ -318,7 +341,7 @@ footer ul a[href="#about"]:hover {
   color: #EF7197;
 }
 footer ul a[href="#want"]:hover {
-  color: #F1F14B;
+  color: #ba75e8;
 }
 footer ul a[href="#qa"]:hover {
   color: #5FA0DF;
@@ -362,6 +385,9 @@ footer .copyright {
   /*------------------------------
       common
   ------------------------------*/
+  html {
+    font-size: 16px;
+  }
   h2 {
     height: 30px;
   }
