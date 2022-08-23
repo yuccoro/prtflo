@@ -30,10 +30,17 @@ section {
 }
 h2 {
   width: fit-content;
-  margin: 0 auto 8%;
+  margin: 0 auto;
   font-weight: bold;
   font-size: 1.2em;
   border-bottom: 2px solid #31A3A3;
+}
+h2 + h2 {
+  margin: 5px auto 8%;
+  font-size: .8em;
+  font-weight: initial;
+  color: #31A3A3;
+  border: none;
 }
 
 .works ul {
@@ -93,8 +100,8 @@ h2 {
   flex-basis: calc(100% - 150px);
 }
 .about .text h3 {
-  font-size: .8em;
-  font-weight: bold;
+  font-size: 1em;
+  font-weight: initial;
 }
 .about .text h4 {
   font-size: .6em;
