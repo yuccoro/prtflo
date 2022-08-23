@@ -2,7 +2,7 @@
 
 html {
   font-family:Arial, Helvetica, sans-serif;
-  font-size: 94%;
+  font-size: 16px;
   color: #080808;
   background-color: #e5e6e1;
   line-height: 1.5;
@@ -50,9 +50,15 @@ header nav ul {
 header nav a {
   text-align: center;
 }
-
+header nav ul a p {
+  opacity: 1;
+  transition: .3s;
+}
+header nav ul a:hover p {
+  opacity: .6;
+}
 header nav .en {
-  color: #000;
+  color: #202020;
   font-size: 1.2em;
 }
 header nav .ja {
@@ -132,7 +138,6 @@ h2 {
 }
 #owner p {
   text-shadow: 2px 2px 2px rgba(255, 255, 255, .6);
-  font-size: .8em;
   margin-top: 20px;
   line-height: 2;
 }
@@ -293,6 +298,9 @@ footer .container {
     width: 100%;
   }
 
+  /* ------------------------------ 
+    ヘッダー
+  ------------------------------ */
   header nav {
     height: 100%;
     padding: 0 15px;
@@ -329,7 +337,7 @@ footer .container {
     gap: 15px;
     position: relative;
     height: auto;
-    opacity: 0;
+    transform: translateX(calc(100% + 25px));
     transition: .5s;
   }
   header nav li:last-child {
@@ -353,15 +361,23 @@ footer .container {
     top: 28px;
   }
   header nav.open ul {
-    opacity: 1;
+    transform: translateY(0);
   }
 
   section:first-child {
     margin-top: 50px;
   }
 
+  #lead .text {
+    font-size: .8em;
+    line-height: 1.5;
+  }
   #lead .btn {
     margin-bottom: 150px;
+  }
+
+  #owner p {
+    font-size: .8em;
   }
 
   #news .inner {
