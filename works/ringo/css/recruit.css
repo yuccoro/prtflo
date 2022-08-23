@@ -1,7 +1,8 @@
 @charset "utf-8";
 /*Recruit設定*/
 #recruit{
-	min-height:100vh;
+	min-height:900px;
+	max-height: auto;
 }
 #recruit th{
 	font-size: 16px;
@@ -39,6 +40,7 @@
 	position: relative;
 	bottom: auto;
 	height: 300px;
+	width: 400px;
 }
 .bg_recimg{
 	background-image: url("../img/rec_bgimg.png");
@@ -74,6 +76,7 @@
 	position: relative;
 	bottom: auto;
 	height: 200px;
+	width: 250px;
 }
 .bg_recimg{
 	background-repeat: no-repeat;

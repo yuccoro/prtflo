@@ -5,7 +5,7 @@
 	max-height: auto;
 }
 .acopen {
-    padding: 10px;
+    padding: 10px 0;
     width: 100%;
 	/*カーソルの形を変える*/
     cursor: pointer;
@@ -88,11 +88,8 @@
 	margin-right: 30px;
 	padding: 20px;
 }
-	#qa .acclose p{
-	font-size: 12pt;
-}
 	#qa .acopen p,ul .flow p{
-	font-size: 14pt;
+	font-size: 1.17em;
 	font-style: bold;
 }
 	.peke {
