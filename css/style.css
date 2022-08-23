@@ -32,7 +32,7 @@ h2 {
   width: fit-content;
   margin: 0 auto;
   font-weight: bold;
-  font-size: 1.2em;
+  font-size: 1.4em;
   border-bottom: 2px solid #31A3A3;
 }
 h2 + h2 {
@@ -45,8 +45,10 @@ h2 + h2 {
 
 .works ul {
   display: flex;
-  justify-content: space-around;
-  gap: 8%;
+  justify-content: center;
+  flex-direction: row-reverse;
+  flex-wrap: wrap;
+  gap: 5%;
 }
 .works li {
   position: relative;
