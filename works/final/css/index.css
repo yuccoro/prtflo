@@ -1,0 +1,41 @@
+@charset "utf-8";
+
+/*------------------------------
+  メインビジュアル
+------------------------------*/
+.mainvisual {
+  height: 500px;
+  overflow: hidden;
+  background-image: url("../img/bg_border.png");
+  border-top: 5px solid #ebc110;
+  border-bottom: 5px solid #ebc110;
+}
+/* カルーセル */
+.mainvisual img {
+  margin: 0 auto;
+}
+.slider {
+  display: flex;
+  width: 100%;
+  margin: 10px 0;
+}
+.slider p {
+  width: auto;
+  height: 480px;
+}
+.slider img {
+  vertical-align: top;
+  width: auto;
+  height: 100%;
+}
+
+@media screen and (max-width:600px) {
+
+  .mainvisual {
+    height: 320px;
+    margin-top: 120px;
+  }
+  .slider p {
+    height: 300px;
+  }
+}

@@ -1,0 +1,48 @@
+@charset "utf-8";
+
+.contents-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 5%;
+  padding: 0 10%;
+}
+.profile-icon {
+  text-align: center;
+}
+.profile-icon img {
+  width: 100%;
+}
+.text-box {
+  max-width: 300px;
+  min-width: 300px;
+}
+h2 {
+  font-size: 1em
+}
+h3 {
+  font-size: 1.4em;
+  margin-top: 15px;
+}
+h3 + p {
+  margin-top: 20px; 
+}
+
+@media screen and (max-width:600px) {
+  .contents-box {
+    flex-direction: column;
+    gap: 30px;
+    flex-wrap: wrap;
+  }
+  .profile-icon {
+    max-width: 80%;
+  }
+  .text-box {
+    min-width: auto;
+  }
+  h2,
+  h3 {
+    text-align: center;
+  }
+}
