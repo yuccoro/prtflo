@@ -1,8 +1,5 @@
 @charset "utf-8";
 
-section {
-  position: relative;
-}
 h2 {
   position: absolute;
   left: 0; right: 0; /* 中央寄せにするため */
@@ -21,6 +18,23 @@ h3 {
 }
 h3 img {
   width: 100%;
+}
+h3.oshigoto-caption {
+  position: relative;
+  text-align: center;
+  font-size: 1.4em;
+  animation: bound 1s infinite 1s;
+}
+@keyframes bound {
+  0% {
+    bottom: 0;
+  }
+  50% {
+    bottom: 10px;
+  }
+  100% {
+    bottom: 0;
+  }
 }
 .contents-box {
   position: relative;
@@ -80,6 +94,7 @@ input[type="submit"] {
   border: none;
   background-color: #88b999;
   cursor: pointer;
+  transition: background-color .3s;
 }
 input[type="submit"]:hover {
   background-color: #ebc110;

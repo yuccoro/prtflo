@@ -30,6 +30,22 @@ body {
   margin: 0 8%;
 }
 
+/* ページ読み込み時のアニメーション */
+section {
+  position: relative;
+  animation: fadeIn 1s;
+}
+@keyframes fadeIn {
+  0% {
+    top: 30px;
+    opacity: 0
+  }
+  100% {
+    top: 0;
+    opacity: 1;
+  }
+}
+
 /*------------------------------
   ヘッダー
 ------------------------------*/

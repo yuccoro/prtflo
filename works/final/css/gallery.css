@@ -27,7 +27,6 @@
 .contents-box {
   display: none;
   position: relative;
-  opacity: 0;
 }
 .contents-box p {
   height: 200px;
@@ -49,9 +48,11 @@
 .contents-box.selected {
   display: flex;
   flex-wrap: wrap;
-  opacity: 1;
 }
 
+/*------------------------------
+  レスポンシブ対応
+------------------------------*/
 @media screen and (max-width:600px) {
   .contents-box p {
     height: 100px;

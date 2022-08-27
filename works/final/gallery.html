@@ -4,14 +4,24 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="description" content="いずみだひろこのポートフォリオサイトです。イラストやアニメーションのお仕事を受け付けてます。">
-<title>ギャラリー | HIROKO IZUMIDA | illustrator / animator</title>
+<title>ギャラリー | HIROKO IZUMIDA</title>
 <script src="js/jquery-3.6.0.min.js"></script>
-<script src="js/jquery.carouFredSel-6.2.1-packed.js"></script>
+<script src="js/lightbox.min.js"></script>
+<script src="js/loader.js"></script>
 <link rel="stylesheet" href="css/common.css">
 <link rel="stylesheet" href="css/gallery.css">
+<link rel="stylesheet" href="css/jquery/lightbox/lightbox.min.css">
+<link rel="stylesheet" href="css/loader.css">
 </head>
 
 <body>
+  <!-- ローディング画面 -->
+  <div id="loader">
+    <div class="spinner">
+      <div class="nowloading"><img src="img/loading.png" alt="now loading"></div>
+    </div>
+  </div>
+
   <header>
     <h1><a href="index.html"><img src="img/logo.svg" alt="HIROKO IZUMIDA"></a></h1>
     <nav>
@@ -38,33 +48,35 @@
           <span class="tab">GIF</span>
         </div>
         <div class="contents-box selected">
-          <p><img src="img/gallery/illustration/01.png" alt="イラスト１"></p>
-          <p><img src="img/gallery/illustration/02.png" alt="イラスト２"></p>
-          <p><img src="img/gallery/illustration/03.png" alt="イラスト３"></p>
-          <p><img src="img/gallery/illustration/04.jpg" alt="イラスト４"></p>
-          <p><img src="img/gallery/illustration/05.jpg" alt="イラスト５"></p>
-          <p><img src="img/gallery/illustration/06.jpg" alt="イラスト６"></p>
-          <p><img src="img/gallery/illustration/07.jpg" alt="イラスト７"></p>
-          <p><img src="img/gallery/illustration/09.jpg" alt="イラスト９"></p>
-          <p><img src="img/gallery/illustration/10.jpg" alt="イラスト10"></p>
-          <p><img src="img/gallery/illustration/11.jpg" alt="イラスト11"></p>
-          <p><img src="img/gallery/illustration/12.png" alt="イラスト12"></p>
-          <p><img src="img/gallery/illustration/13.png" alt="イラスト13"></p>
-          <p><img src="img/gallery/illustration/14.png" alt="イラスト14"></p>
-          <p><img src="img/gallery/illustration/15.png" alt="イラスト15"></p>
+          <p><a href="img/gallery/illustration/01.png" rel="lightbox[illustration]"><img src="img/gallery/illustration/01.png" alt="イラスト１"></a></p>
+          <p><a href="img/gallery/illustration/02.png" rel="lightbox[illustration]"><img src="img/gallery/illustration/02.png" alt="イラスト２"></a></p>
+          <p><a href="img/gallery/illustration/03.png" rel="lightbox[illustration]"><img src="img/gallery/illustration/03.png" alt="イラスト３"></a></p>
+          <p><a href="img/gallery/illustration/04.jpg" rel="lightbox[illustration]"><img src="img/gallery/illustration/04.jpg" alt="イラスト４"></a></p>
+          <p><a href="img/gallery/illustration/05.jpg" rel="lightbox[illustration]"><img src="img/gallery/illustration/05.jpg" alt="イラスト５"></a></p>
+          <p><a href="img/gallery/illustration/06.jpg" rel="lightbox[illustration]"><img src="img/gallery/illustration/06.jpg" alt="イラスト６"></a></p>
+          <p><a href="img/gallery/illustration/07.jpg" rel="lightbox[illustration]"><img src="img/gallery/illustration/07.jpg" alt="イラスト７"></a></p>
+          <p><a href="img/gallery/illustration/09.jpg" rel="lightbox[illustration]"><img src="img/gallery/illustration/09.jpg" alt="イラスト９"></a></p>
+          <p><a href="img/gallery/illustration/10.jpg" rel="lightbox[illustration]"><img src="img/gallery/illustration/10.jpg" alt="イラスト10"></a></p>
+          <p><a href="img/gallery/illustration/11.jpg" rel="lightbox[illustration]"><img src="img/gallery/illustration/11.jpg" alt="イラスト11"></a></p>
+          <p><a href="img/gallery/illustration/12.png" rel="lightbox[illustration]"><img src="img/gallery/illustration/12.png" alt="イラスト12"></a></p>
+          <p><a href="img/gallery/illustration/13.png" rel="lightbox[illustration]"><img src="img/gallery/illustration/13.png" alt="イラスト13"></a></p>
+          <p><a href="img/gallery/illustration/14.png" rel="lightbox[illustration]"><img src="img/gallery/illustration/14.png" alt="イラスト14"></a></p>
+          <p><a href="img/gallery/illustration/15.png" rel="lightbox[illustration]"><img src="img/gallery/illustration/15.png" alt="イラスト15"></a></p>
         </div>
         <div class="contents-box">
-          <p><img src="img/gallery/gif/1_syoronpo2.gif" alt="GIFアニメ：小籠包"></p>
-          <p><img src="img/gallery/gif/4_dakishimesasete.gif" alt="GIFアニメ：抱きしめさせて"></p>
-          <p><img src="img/gallery/gif/5_powapowa.GIF" alt="GIFアニメ：ぽわぽわ"></p>
-          <p><img src="img/gallery/gif/6_syoronpo.gif" alt="GIFアニメ：小籠包 カンフーver."></p>
-          <p><img src="img/gallery/gif/7_catchgo.gif" alt="GIFアニメ：キャッチゴー"></p>
-          <p><img src="img/gallery/gif/8_sirinonakakarakonnichiwa.gif" alt="GIFアニメ：しりのなかからこんにちは"></p>
-          <p><img src="img/gallery/gif/10_ebiten.gif" alt="GIFアニメ：エビ天"></p>
-          <p><img src="img/gallery/gif/11_milktea_2.gif" alt="GIFアニメ：ミルクティー"></p>
-          <p><img src="img/gallery/gif/12_hitsuji.gif" alt="GIFアニメ：ひつじ"></p>
-          <p><img src="img/gallery/gif/13_dounut.gif" alt="GIFアニメ：ドーナッツ"></p>
-          <p><img src="img/gallery/gif/14_flower.gif" alt="GIFアニメ：お花畑"></p>
+          <p><a href="img/gallery/gif/1_syoronpo2.gif" rel="lightbox[GIF]"><img src="img/gallery/gif/1_syoronpo2.gif" alt="GIFアニメ：小籠包"></a></p>
+          <p><a href="img/gallery/gif/4_dakishimesasete.gif" rel="lightbox[GIF]"><img src="img/gallery/gif/4_dakishimesasete.gif" alt="GIFアニメ：抱きしめさせて"></a></p>
+          <p><a href="img/gallery/gif/5_powapowa.GIF" rel="lightbox[GIF]"><img src="img/gallery/gif/5_powapowa.GIF" alt="GIFアニメ：ぽわぽわ"></a></p>
+          <p><a href="img/gallery/gif/6_syoronpo.gif" rel="lightbox[GIF]"><img src="img/gallery/gif/6_syoronpo.gif" alt="GIFアニメ：小籠包 カンフーver."></a></p>
+          <p><a href="img/gallery/gif/7_catchgo.gif" rel="lightbox[GIF]"><img src="img/gallery/gif/7_catchgo.gif" alt="GIFアニメ：キャッチゴー"></a></p>
+          <p><a href="img/gallery/gif/8_sirinonakakarakonnichiwa.gif" rel="lightbox[GIF]"><img src="img/gallery/gif/8_sirinonakakarakonnichiwa.gif" alt="GIFアニメ：しりのなかからこんにちは"></a></p>
+          <p><a href="img/gallery/gif/10_ebiten.gif" rel="lightbox[GIF]"><img src="img/gallery/gif/10_ebiten.gif" alt="GIFアニメ：エビ天"></a></p>
+          <p><a href="img/gallery/gif/11_milktea_2.gif" rel="lightbox[GIF]"><img src="img/gallery/gif/11_milktea_2.gif" alt="GIFアニメ：ミルクティー"></a></p>
+          <p><a href="img/gallery/gif/12_hitsuji.gif" rel="lightbox[GIF]"><img src="img/gallery/gif/12_hitsuji.gif" alt="GIFアニメ：ひつじ"></a></p>
+          <p><a href="img/gallery/gif/13_dounut.gif" rel="lightbox[GIF]"><img src="img/gallery/gif/13_dounut.gif" alt="GIFアニメ：ドーナッツ"></a></p>
+          <p><a href="img/gallery/gif/14_flower.gif" rel="lightbox[GIF]"><img src="img/gallery/gif/14_flower.gif" alt="GIFアニメ：お花畑"></a></p>
+          <p><a href="img/gallery/gif/15_mtsuisumitomo.gif" rel="lightbox[GIF]"><img src="img/gallery/gif/15_mtsuisumitomo.gif" alt="GIFアニメ：暑中見舞い"></a></p>
+          <p><a href="img/gallery/gif/16_thankyou.gif" rel="lightbox[GIF]"><img src="img/gallery/gif/16_thankyou.gif" alt="GIFアニメ：Thank you"></a></p>
         </div>
       </div>
     </section>

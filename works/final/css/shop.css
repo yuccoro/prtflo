@@ -1,8 +1,5 @@
 @charset "utf-8";
 
-section {
-  position: relative;
-}
 h2 {
   position: absolute;
   left: 0; right: 0; /* 中央寄せにするため */

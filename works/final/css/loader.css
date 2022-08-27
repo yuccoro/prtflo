@@ -1,0 +1,39 @@
+@charset "utf-8";
+
+@keyframes fadeOut {
+  from {
+      opacity: 1;
+  }
+  to {
+      display: none;
+      opacity: 0;
+      z-index: -999;
+  }
+}
+
+#loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #88b999;
+  /* 環境によって「z-index」追加 */
+  z-index: 999;
+}
+/* 読み込み完了後に「loaded」を付与する */
+#loader.loaded {
+  animation: fadeOut 1s forwards .5s;
+}
+
+#loader .nowloading {
+  position: relative;
+  width: 50px;
+  height: 50px;
+  top: calc((100vh - 50px) / 2);
+  left: calc((100vw - 50px) / 2);
+}
+
+#loader .nowloading img {
+  width: 100%;
+}
