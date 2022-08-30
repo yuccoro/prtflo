@@ -167,21 +167,23 @@ footer p {
   nav ul {
     position: absolute;
     top: 0;
-    right: 0;
+    right: -100vw;
     width: 100vw;
     height: 50vh;
     padding: 60px 0;
-    transform: translateX(100%);
+    transform: translateX(0);
+    background-color: #88b999;
     flex-direction: column;
-    transition: .3s;
+    justify-content: center;
+    gap: 15px;
+    transition: transform .3s;
   }
   nav ul.inner {
     margin: 0;
   }
   /* open */
   nav ul.open {
-    transform: translateX(0);
-    background-color: #88b999;
+    transform: translateX(-100%);
   }
   nav .toggle.open span:nth-child(1) {
     top: 28px;

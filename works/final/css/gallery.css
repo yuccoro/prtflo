@@ -6,7 +6,7 @@
 .tab-container {
   display: flex;
   justify-content: center;
-  gap: 10px;
+  gap: 15px;
   margin-bottom: 30px;
 }
 .tab {
@@ -14,9 +14,9 @@
   position: relative;
   top: 0;
   width: 120px;
-  height: 26px;
-  padding-top: 4px;
-  border-radius: 15px;
+  height: 30px;
+  padding-top: 8px;
+  border-radius: 30px;
   text-align: center;
   color: #fff;
   background-color: #88b999;

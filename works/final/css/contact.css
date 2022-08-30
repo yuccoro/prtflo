@@ -124,4 +124,13 @@ input[type="submit"]:hover {
   form dd + dt + dd{
     margin-top: 0;
   }
+  form dd input {
+    height: 20px;
+  }
+  form dd textarea {
+    height: 120px;
+  }
+  .submit-btn {
+    height: 35px;
+  }
 }

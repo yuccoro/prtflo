@@ -3,7 +3,6 @@
 ------------------------------*/
 $(document).ready(function(){
   $('.slider').slick({
-    infinite: true,
     arrows: false,
     autoplay: true,
     autoplaySpeed: 0, //自動再生のスライド切り替えまでの時間を設定

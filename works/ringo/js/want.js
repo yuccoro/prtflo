@@ -3,6 +3,7 @@
   const targets = document.querySelectorAll('.box');
 
   function callback(entries, obs) {
+
     entries.forEach(entry => {
       if (!entry.isIntersecting) {
         return;
