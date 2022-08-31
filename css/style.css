@@ -21,7 +21,7 @@ h1 + p {
 }
 
 .container {
-  margin: 0 8% 8%;
+  margin: 0 8%;
   padding: 5%;
   background-color: rgba(255, 255, 255, .7);
 }
@@ -151,7 +151,7 @@ h2 + h2 {
 }
 .contact .btn {
   width: 120px;
-  margin: 30px auto 0;
+  margin: 10px auto 0;
 }
 .contact .btn input {
   width: 100%;
@@ -170,10 +170,6 @@ h2 + h2 {
   background-color: #014E59;
 }
 
-footer p {
-  font-size: .8em;
-  text-align: center;
-}
 
 /* ------------------------------ 
     レスポンシブ対応（スマホ）
