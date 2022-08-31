@@ -33,7 +33,7 @@
       <h1>株式会社GRACE 採用LP</h1>
       <p>＠ 職業訓練 グループ制作</p>
       <div class="btn-area">
-        <p><a href="works/ringo/index.html" target="_blank">PAGE</a></p>
+        <p><a href="http://www.rico-web.net/lunch-lp/grace/" target="_blank">PAGE</a></p>
         <p><a href="https://github.com/yuccoro/portfolio/tree/main/works/ringo" target="_blank">SOURCE</a></p>
       </div>
       <div class="charge-area">
@@ -42,9 +42,10 @@
       <section>
         <h2>グループ内分担について</h2>
         <p class="works-text">
-          コーディングをメインで担当しました。<br>
+          ディレクター、デザインター、コーダー、プレゼン資料作成のうち、コーダーをメインで担当しました。<br>
+          デザイン担当が作成したデザインカンプを元に、適宜イメージや動き、レイアウトなど細かな点についてメンバーとすり合わせをしながらコーディングしました。<br>
           メインビジュアル・ナビゲーション・共通部品（ヘッダー、各セクションの大枠、フッター）、ABOUTの実装および、コーディングにおけるルール決めなどを行いました。<br>
-          ※Q&amp;A、RECRUIT、CONTACTの実装は他メンバーが担当</p>
+          WANT、Q&amp;A、RECRUIT、CONTACTの実装は他メンバーに作業を振り分けて担当してもらいました。</p>
       </section>
       <section>
         <h2>制作時間</h2>
@@ -56,22 +57,52 @@
       <section>
         <h2>制作の経緯</h2>
         <p class="works-text">
-          職業訓練のグループ制作課題として
+          職業訓練（マークアップWebデザイン科）のグループ制作課題として、訓練生の採用実績を多数持つ、株式会社GRACE様の職業訓練生を対象とした採用LPを制作しました。
         </p>
       </section>
-      <section>
+      <section id="mokuteki">
         <h2>サイトの目的</h2>
         <ul>
+          <li>LPを訪れた職業訓練生による採用に関する問い合わせ数を上げる</li>
         </ul>
       </section>
-      <section>
+      <section id="target">
         <h2>ターゲット</h2>
+        <p class="works-text">職業訓練校である専門学校東京テクニカルカレッジ テラハウスICAに通う職業訓練生</p>
       </section>
-      <section>
+      <section id="tool">
+        <h2>使用ツール</h2>
+        <ul>
+          <li>Photoshop</li>
+          <li>XD</li>
+          <li>Dreamweaver</li>
+          <li>FFFTP</li>
+        </ul>
+      </section>
+      <section id="point">
         <h2>意識した点</h2>
-        <h3>配色 <span></span><span></span><span></span></h3>
+        <h3>コーディングにおける分業の仕方</h3>
         <p class="works-text">
+          バージョン管理ツールが使用できない環境だったため、コードを統合する際にそれぞれの更新箇所がバッティングしないよう、以下ようにルールを決めました。
         </p>
+        <ul>
+          <li>index.htmlを更新するのは原則メインコーダー（自分）のみで、各メンバーの更新を反映させる際は、メインコーダーが更新箇所を確認した上で、ソースに追加する。</li>
+          <li>ソースをFTPにアップロードする前後で必ずメンバーに声かけをする。</li>
+          <li>セクション区切りでコーディングを分担するため、全てのセクションに渡る共通のスタイルはstyle.cssで定義し、各セクションのスタイルは各セクションごとにcssを作成して記述する。※jsについても同様。</li>
+        </ul>
+        <h3>共通するcssの定義はまとめる</h3>
+        <p class="works-text">
+          cssで同じ定義が重複することで無駄なコードが増えないように、全セクションで共通する定義はstyle.css内で設定しました。
+        </p>
+        <h3>自分以外の作業者が見てもわかりやすい記述を心がける</h3>
+        <p class="works-text">
+          コーディングは基本的に分業制のため、なるべく誰が見ても分かりやすいように記述することを心がけていました。特に意識したことは以下の通りです。
+        </p>
+        <ul>
+          <li>cssの記述する順序は、まず初めに共通設定を記述し、以下はヘッダーからフッターまで（ページの上から下まで）の流れで記述する。</li>
+          <li>何を定義しているのか、何の処理なのか、一見分かりにくいところは適宜コメントを付与する。</li>
+          <li>cssセレクタの指定では、どの要素を指定しているのか直感的に分かりやすいように、場合によってはクラス名だけでなく、敢えて親要素（のクラス名）を記述するなど、とにかく可読性を心がけた。</li>
+        </ul>
       </section>
     </div>
   </main>

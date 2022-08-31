@@ -65,7 +65,7 @@ h1 + p {
 
 section {
   line-height: 2;
-  margin-top: 8%;
+  margin-top: 5%;
 }
 section h2 {
   display: inline-block;
@@ -124,6 +124,13 @@ h3 > span:nth-child(2) {
 }
 h3 > span:nth-child(3) {
   background-color: #1d4765;
+}
+
+#point ul {
+  margin-top: 0;
+}
+#point li {
+  margin-left: calc(20px + 1.2em * 2);
 }
 
 @media screen and (max-width:600px) {
