@@ -36,6 +36,7 @@ h1 + p {
   width: 80px;
   padding: 5px;
   text-align: center;
+  font-size: .7em;
   background-color: #31A3A3;
   border-radius: 20px;
   transition: background-color .3s;
@@ -58,7 +59,7 @@ h1 + p {
   width: 80px;
   padding: 5px;
   text-align: center;
-  font-size: .8em;
+  font-size: .7em;
   border: 1px solid #31A3A3;
   border-radius: 20px;
 }
@@ -130,12 +131,6 @@ h3 > span:nth-child(3) {
   .mock {
     width: 80%;
     margin-top: 3%;
-  }
-  .btn-area > p {
-    font-size: .8em;
-  }
-  .charge-area > p {
-    font-size: .6em;
   }
   
   section {
