@@ -47,13 +47,16 @@ h2 + h2 {
   display: flex;
   justify-content: center;
   flex-direction: row-reverse;
-  flex-wrap: wrap;
-  gap: 5%;
+  flex-wrap: wrap-reverse;
+  gap: 4%;
 }
 .works li {
   position: relative;
-  flex: 1;
+  flex-basis: 48%;
   box-shadow: 8px 8px #dcdcdc;
+}
+.works li:not(:last-child) {
+  margin-top: 4%;
 }
 .works li img {
   width: 100%;
@@ -104,6 +107,7 @@ h2 + h2 {
 .about .text h3 {
   font-size: 1em;
   font-weight: initial;
+  white-space: pre;
 }
 .about .text h4 {
   font-size: .6em;
@@ -189,6 +193,9 @@ h2 + h2 {
   .works ul {
     flex-direction: column-reverse;
     gap: 30px;
+  }
+  .works li:not(:last-child) {
+    margin-top: 0;
   }
   .works .caption {
     display: none;
