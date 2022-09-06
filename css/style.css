@@ -58,6 +58,10 @@ h2 + h2 {
 .works li:not(:last-child) {
   margin-top: 4%;
 }
+.works li a {
+  display: block;
+  width: 100%;
+}
 .works li img {
   width: 100%;
 }
