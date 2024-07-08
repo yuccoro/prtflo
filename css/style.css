@@ -64,6 +64,7 @@ h2 + h2 {
 }
 .works li img {
   width: 100%;
+  height: auto;
 }
 .works li a,
 .works .caption {
@@ -110,8 +111,8 @@ h2 + h2 {
 }
 .about .text h3 {
   font-size: 1em;
-  font-weight: initial;
   white-space: pre;
+  padding-bottom: 20px;
 }
 .about .text h4 {
   font-size: .6em;
@@ -120,10 +121,36 @@ h2 + h2 {
 }
 .about .text p {
   margin-top: 8px;
-  font-size: .7em;
+  font-size: .8em;
 }
 .about .text p:first-of-type {
   margin-top: 15px;
+}
+.about .profile .text dl {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  font-size: .8em;
+  line-height: 1.75;
+}
+.about .profile .text dl dt {
+  width: 25%;
+  font-weight: bold;
+}
+.about .profile .text dl dd {
+  width: 75%;
+}
+.about .profile .text dl dt:not(:first-of-type),
+.about .profile .text dl dd:not(:first-of-type) {
+  padding-top: 16px;
+}
+.about .profile .text dl dd span {
+  display: block;
+  font-weight: bold;
+  text-decoration: underline;
+}
+.about .profile .text dl dd span.skill-old {
+  padding-top: 8px;
 }
 
 .contact .form {
