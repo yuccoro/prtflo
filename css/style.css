@@ -55,7 +55,8 @@ h2 + h2 {
   flex-basis: 48%;
   box-shadow: 8px 8px #dcdcdc;
 }
-.works li:not(:last-child) {
+.works li:not(:last-child),
+.works li:not(:nth-last-child(2)) {
   margin-top: 4%;
 }
 .works li a {
@@ -108,11 +109,12 @@ h2 + h2 {
 }
 .about .text {
   flex-basis: calc(100% - 150px);
+  margin: 0 auto;
 }
 .about .text h3 {
   font-size: 1em;
-  white-space: pre;
-  padding-bottom: 20px;
+  text-align: center;
+  padding-bottom: 40px;
 }
 .about .text h4 {
   font-size: .6em;
@@ -135,14 +137,15 @@ h2 + h2 {
 }
 .about .profile .text dl dt {
   width: 25%;
+  margin-right: 5%;
   font-weight: bold;
 }
 .about .profile .text dl dd {
-  width: 75%;
+  width: 70%;
 }
 .about .profile .text dl dt:not(:first-of-type),
 .about .profile .text dl dd:not(:first-of-type) {
-  padding-top: 16px;
+  padding-top: 24px;
 }
 .about .profile .text dl dd span {
   display: block;
@@ -209,10 +212,13 @@ h2 + h2 {
 /* ------------------------------ 
     レスポンシブ対応（スマホ）
 ------------------------------ */
-@media screen and (max-width:600px) {
+@media screen and (max-width:768px) {
+  .hero {
+    height: 75vh;
+  }
   .container {
     margin: 16% 8%;
-    padding: 10%;
+    padding: 10% 10% 15%;
   }
   section + section {
     margin-top: 30%;
@@ -240,6 +246,23 @@ h2 + h2 {
   .about .profile .image {
     width: 100px;
   }
+  .about .profile .text dl {
+    display: block;
+  }
+  .about .profile .text dl dt,
+  .about .profile .text dl dd {
+    width: 100%;
+    margin: 0;
+  }
+  .about .profile .text dl dt {
+    font-size: 1.2em;
+  }
+  .about .profile .text dl dt:not(:first-of-type) {
+    padding-top: 24px;
+  }
+  .about .profile .text dl dd {
+    padding-top: 12px!important;
+  }
   .about .text h3,
   .about .text h4 {
     text-align: center;
@@ -250,7 +273,6 @@ h2 + h2 {
   .about .text p:first-of-type {
     margin-top: 30px;
   }
-
   .contact dt,
   .contact dd {
     width: 100%;
